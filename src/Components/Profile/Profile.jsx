@@ -1,3 +1,4 @@
+import css from "./Profile.module.css"
 export default function Profile({ userName: {
     username,
     tag,
@@ -6,29 +7,29 @@ export default function Profile({ userName: {
     stats: { followers, views, likes },
   },}) {
     return(
-        <div>
-  <div>
-    <img
+        <div className= {css.table}>
+  <div >
+    <img className={css.profileImg}
       src={avatar}
       alt="User avatar"
     />
-    <p>{username}</p>
-    <p>{tag}</p>
-    <p>{location}</p>
+    <p className ={css.profileAvatar}>{username}</p>
+    <p className ={css.profileTag}>{tag}</p>
+    <p className ={css.profileLocation}>{location}</p>
   </div>
 
-  <ul>
-    <li>
-      <span>Followers</span>
-      <span>{followers}</span>
+  <ul className={css.profileUl}>
+    <li className={css.profileLi}>
+      <span className ={css.profileTableName}>Followers</span>
+      <span className ={css.profileTableQuantity}>{followers}</span>
     </li>
-    <li>
-      <span>Views</span>
-      <span>{views}</span>
+    <li className={css.profileLi}>
+      <span className ={css.profileTableName}>Views</span>
+      <span className ={css.profileTableQuantity}>{views}</span>
     </li>
-    <li>
-      <span>Likes</span>
-      <span>{likes}</span>
+    <li className={css.profileLi}>
+      <span className ={css.profileTableName}>Likes</span>
+      <span className ={css.profileTableQuantity}>{likes}</span>
     </li>
   </ul>
 </div>
